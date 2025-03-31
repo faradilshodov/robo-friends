@@ -15,7 +15,7 @@ function App() {
             .then(users => setRobots(users));
         // console.log(count);
     }, []) // If you add count in array, only runs if count changes
-    
+
     const onSearchChange = (event) => {
         setSearchfield(event.target.value)
     }
@@ -27,11 +27,11 @@ function App() {
         <h1>Loading</h1> :
         (
             <div className="tc">
-                <h1 className="f1">RoboFriends</h1>
+                <h1 className="f1">MonstroFriends</h1>
                 <button onClick={() => setCount(count + 1)}>Click Me!</button>
-                <SearchBox searchChange={onSearchChange}/>
+                <SearchBox searchChange={onSearchChange} />
                 <Scroll>
-                    <CardList robots={filteredRobots}/>
+                    <CardList robots={filteredRobots} />
                 </Scroll>
             </div>
         );
